@@ -41,7 +41,7 @@ async function parseData() {
 }
 
 async function makeData(origin) {
-  const { problem_description, problemId, level, result_message, division, language_extension, title, runtime, memory, code } = origin;
+  const { link, problem_description, problemId, level, result_message, division, language_extension, title, runtime, memory, code } = origin;
   const directory = `프로그래머스/${level}/${problemId}. ${convertSingleCharToDoubleChar(title)}`;
   const levelWithLv = `${level}`.includes('lv') ? level : `lv${level}`.replace('lv', 'level ');
   const message = `[${levelWithLv}] Title: ${title}, Time: ${runtime}, Memory: ${memory} -BaekjoonHub`;
